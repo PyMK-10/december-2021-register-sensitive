@@ -49,7 +49,6 @@ df['os_lower'].value_counts(dropna=False)
 for i in pd.unique(dfnan['bundle']).tolist():
 
     dataPar = df[df['bundle'] == i]
-
     dataPar.dropna(axis=0, inplace=True)
     print(dataPar['gamecategory'].unique(), i)
     print(dataPar['subgamecategory'].unique(), i)
